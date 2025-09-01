@@ -1,24 +1,37 @@
 # Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This project is designed to help me improve my understanding of programming concepts such as asynchronous execution, loops, and working with functions in JavaScript. The software demonstrates a simple "typing effect" where letters are printed to the console one by one, simulating someone typing "HELLO WORLD".
 
-{Provide a description of your software}
-
-{Describe your purpose for creating this software.}
-
-{Provide a link to your YouTube demonstration. It should be a one minute demo of the software running and a walkthrough of the code.}
+The purpose of creating this software is to practice handling asynchronous behavior with `setTimeout`, iterating through arrays, and controlling output timing in JavaScript. It also serves as a small but practical example for learning how to visualize sequential execution in console-based applications.
 
 [Software Demo Video](http://youtube.link.goes.here)
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
-
-{Describe the programming language that you used}
+- **Programming Language:** JavaScript (Node.js)
+- **Tools Used:** VS Code for development, Node.js runtime for executing the code, and GitHub for version control.
+- **Operating System:** Any system with Node.js installed (Windows, Linux, macOS)
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
+- [MDN Web Docs - setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout)
+- [Node.js Documentation](https://nodejs.org/en/docs/)
+- [JavaScript Array forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 
-- [Web Site Name](http://url.link.goes.here)
-- [Web Site Name](http://url.link.goes.here)
+# How it Works
+
+The `sayHello` function prints "HELLO WORLD" letter by letter in the console with a small delay between each letter:
+
+```js
+const sayHello = () => {
+  const letters = ['H', 'E', 'L', 'L', 'O', ' ', 'W', 'O', 'R', 'L', 'D'];
+  letters.forEach((letter, i) => {
+    setTimeout(() => {
+      process.stdout.write(letter);
+      if (i === letters.length - 1) process.stdout.write('\n');
+    }, 200 * i);
+  });
+};
+
+sayHello();
+```
