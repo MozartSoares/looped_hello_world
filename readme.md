@@ -4,7 +4,7 @@ This project is designed to help me improve my understanding of programming conc
 
 The purpose of creating this software is to practice handling asynchronous behavior with `setTimeout`, iterating through arrays, and controlling output timing in JavaScript. It also serves as a small but practical example for learning how to visualize sequential execution in console-based applications.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/PLDOVa0k4Ww)
 
 # Development Environment
 
